@@ -39,7 +39,7 @@
                                 {{ Auth::user()->name }}
                             </a>
                             <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-                                @if(!Auth::user()->is_admin)
+                                @if(Auth::user()->is_admin)
                                 <a href="{{ url('admin/tickets') }}" class="dropdown-item">See all tickets</a>
                                 @else
                                 <a href="{{ url('my_tickets') }}" class="dropdown-item">See all tickets</a>

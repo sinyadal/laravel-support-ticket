@@ -9,7 +9,7 @@
 
                     <p>You are logged in!</p>
 
-                    @if(!Auth::user()->is_admin)
+                    @if(Auth::user()->is_admin)
                     <p>
                         See all
                         <a href="{{ url('admin/tickets') }}">tickets</a>
