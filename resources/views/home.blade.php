@@ -2,14 +2,14 @@
 <div class="container">
     <div class="row">
         <div class="col-md-12">
-
+            <h3 class="mt-4">Dashboard</h3>
             <div class="card mt-4 mb-4">
-                <div class="card-header"><h3 class="mb-0">Dashboard</h3></div>
+
                 <div class="card-body">
 
                     <p>You are logged in!</p>
 
-                    @if(Auth::user()->is_admin)
+                    @if(!Auth::user()->is_admin)
                     <p>
                         See all
                         <a href="{{ url('admin/tickets') }}">tickets</a>

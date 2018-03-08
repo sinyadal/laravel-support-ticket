@@ -2,14 +2,10 @@
 <div class="container">
     <div class="row">
         <div class="col-md-12">
+            <h3 class="mt-4">#{{ $ticket->ticket_id }} - {{ $ticket->title }}</h3>
             <div class="card mt-4 mb-4">
-                <div class="card-header">
-                    <h3 class="mb-0">#{{ $ticket->ticket_id }} - {{ $ticket->title }}</h3>
-                </div>
                 <div class="card-body">
-
                     @include('includes.flash')
-
                     <div class="ticket-info">
                         <p>Message: {{ $ticket->message }}</p>
                         <p>Category: {{ $category->name }}</p>
@@ -25,23 +21,8 @@
 
                     <hr>
 
-                    <div class="comments">
-                        @foreach ($comments as $comment)
-                        <div class="panel panel-@if($ticket->user->id === $comment->user_id) {{" default "}}@else{{"success "}}@endif">
-                            <div class="panel panel-heading">
-                                {{ $comment->user->name }}
-                                <span class="pull-right">{{ $comment->created_at->format('d-m-Y') }}</span>
-                            </div>
-
-                            <div class="panel panel-body">
-                                {{ $comment->comment }}
-                            </div>
-                        </div>
-                        <br>
-                        @endforeach
-                    </div>
-
                     <div class="comment-form">
+                        <h5 class="mb-3">Wanna say something?</h5>
                         <form action="{{ url('comment') }}" method="POST" class="form">
                             {!! csrf_field() !!}
 
@@ -62,6 +43,25 @@
                             </div>
                         </form>
                     </div>
+
+                    <hr>
+
+                    <div class="comments">
+                        <h5 class="mb-3">Comments</h5>
+                        @foreach ($comments as $comment)
+                        <div class="panel panel-@if($ticket->user->id === $comment->user_id) {{" default "}}@else{{"success "}}@endif">
+                            <div class="panel panel-heading">
+                                {{ $comment->user->name }}
+                                <span class="pull-right">{{ $comment->created_at->format('d-m-Y') }}</span>
+                            </div>
+
+                            <div class="panel panel-body">
+                                {{ $comment->comment }}
+                            </div>
+                        </div>
+                        <br> @endforeach
+                    </div>
+
                 </div>
             </div>
         </div>
