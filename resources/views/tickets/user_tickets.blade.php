@@ -33,9 +33,9 @@
                                 </td>
                                 <td>
                                     @if ($ticket->status === 'Open')
-                                    <span class="badge badge-success">{{ $ticket->status }}</span>
+                                    <span class="badge badge-success text-white">{{ $ticket->status }}</span>
                                     @else
-                                    <span class="badge badge-danger">{{ $ticket->status }}</span>
+                                    <span class="badge badge-danger text-white">{{ $ticket->status }}</span>
                                     @endif
                                 </td>
                                 <td>{{ $ticket->updated_at }}</td>
