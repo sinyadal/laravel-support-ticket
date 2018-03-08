@@ -1,8 +1,11 @@
+// Font
+$font-family-sans-serif: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol" !default;
 
-// Body
-$body-bg: #f5f8fa;
+// Border radius
+$border-radius: 1px !default;
+$border-radius-lg: 1px !default;
+$border-radius-sm: 1px !default;
 
-// Typography
-$font-family-sans-serif: "Raleway", sans-serif;
-$font-size-base: 0.9rem;
-$line-height-base: 1.6;
+// Form
+$input-btn-focus-width: 0px !default;
+// $input-btn-focus-color:       rgba($component-active-bg, .25) !default;
