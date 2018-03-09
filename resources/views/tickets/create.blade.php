@@ -2,8 +2,8 @@
 <div class="container">
     <div class="row">
         <div class="col-md-12">
-            <h3 class="mt-4">Open New Tickets</h3>
             <div class="card mt-4 mb-4">
+                <div class="card-header">Open New Tickets</div>
                 <div class="card-body">
                     @include('includes.flash')
 

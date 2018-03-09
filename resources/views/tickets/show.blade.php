@@ -2,8 +2,8 @@
 <div class="container">
     <div class="row">
         <div class="col-md-12">
-            <h3 class="mt-4">#{{ $ticket->ticket_id }} - {{ $ticket->title }}</h3>
             <div class="card mt-4 mb-4">
+                <div class="card-header">#{{ $ticket->ticket_id }} - {{ $ticket->title }}</div>
                 <div class="card-body">
                     @include('includes.flash')
                     <div class="ticket-info">

@@ -2,11 +2,9 @@
 <div class="container">
     <div class="row">
         <div class="col-md-12">
-            <h3 class="mt-4">Tickets</h3>
             <div class="card mt-4 mb-4">
+                <div class="card-header">Tickets</div>
                 <div class="card-body">
-
-
                     @if ($tickets->isEmpty())
                     <p>There are currently no tickets.</p>
                     @else
