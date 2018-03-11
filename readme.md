@@ -1,1 +1,0 @@
-https://scotch.io/tutorials/build-a-support-ticket-application-with-laravel-part-1
